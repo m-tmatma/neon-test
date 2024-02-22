@@ -7,6 +7,7 @@
 * [Arm Neon Intrinsics Reference](https://arm-software.github.io/acle/neon_intrinsics/)
   * [Arm Neon Intrinsics Reference(Table of Contents)](https://arm-software.github.io/acle/neon_intrinsics/advsimd.html)
   * [GitHub Arm C Language Extensions (ACLE)](https://github.com/ARM-software/acle)
+  * [Arm Neon Intrinsics Reference for ACLE Q2 2021](https://developer.arm.com/documentation/ihi0073/latest/)
 
 ## initial setup
 
