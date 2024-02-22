@@ -20,7 +20,17 @@ void conditional_select_int(int* dest, int* src1, int* src2, int size, uint32x4_
     }
 }
 
-int main(int argc, char const* argv[])
+void conditional_select_char(char* dest, char* src1, char* src2, int size, uint8x16_t condition)
+{
+    for (int i = 0; i < size; i += 8) {
+        int8x16_t a = vld1q_s8(src1 + i);
+        int8x16_t b = vld1q_s8(src2 + i);
+        int8x16_t result = vbslq_s8(condition, a, b);
+        vst1q_s8(dest + i, result);
+    }
+}
+
+void test_select_int()
 {
     int buf1[4] = { 0,1,2,3, };
     int buf2[4] = { 4,5,6,7, };
@@ -32,8 +42,34 @@ int main(int argc, char const* argv[])
 
     for( int i = 0; i < 4; i++ )
     {
-        printf("%d, %d, %d, %08x\n",buf1[i],buf2[i],buf3[i], mask[i]);
+        printf("%4d, %4d, %4d, %08x\n",buf1[i],buf2[i],buf3[i], mask[i]);
     }
+}
+
+void test_select_char()
+{
+    char buf1[] = { 0,1,2,3,4,5,6,7 };
+    char buf2[] = { 8,9,10,11,12,13,14,15 };
+    char buf3[16];
+    uint8x16_t mask = { 0, 0xff, 0, 0xff, 0, 0xff, 0, 0xff };
+
+    conditional_select_char(buf3, buf1, buf2, 8, mask);
+
+    for( int i = 0; i < 16; i++ )
+    {
+        printf("%4d, %4d, %4d, %02x\n",buf1[i],buf2[i],buf3[i], mask[i]);
+    }
+}
+
+int main(int argc, char const* argv[])
+{
+    printf("test_select_int\n");
+    test_select_int();
+    printf("\n");
+
+    printf("test_select_char\n");
+    test_select_char();
+    printf("\n");
 
     return 0;
 }
