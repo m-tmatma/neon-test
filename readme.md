@@ -2,7 +2,11 @@
 
 ## link
 
-* https://qiita.com/ar90n@github/items/347790d26a90f6de637b
+* [qemuでneonをつかってみる](https://qiita.com/ar90n@github/items/347790d26a90f6de637b)
+* [いまさら聞けない ARM を使ったNEONの基礎と活用事例（2021/08/05）](https://www.docswell.com/s/fixstars/KENEQJ-20210805)
+* [Arm Neon Intrinsics Reference](https://arm-software.github.io/acle/neon_intrinsics/)
+  * [Arm Neon Intrinsics Reference(Table of Contents)](https://arm-software.github.io/acle/neon_intrinsics/advsimd.html)
+  * [GitHub Arm C Language Extensions (ACLE)](https://github.com/ARM-software/acle)
 
 ## initial setup
 
