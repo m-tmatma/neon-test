@@ -26,4 +26,4 @@ jobs:
       run: make run_neon_test1
 
     - name: run neon_test_select
-      run: make run_neon_test_select
+      run: make run_neon_select
