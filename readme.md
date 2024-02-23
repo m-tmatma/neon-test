@@ -7,8 +7,9 @@
 * arm
   * [Arm Neon Intrinsics Reference](https://arm-software.github.io/acle/neon_intrinsics/)
   * [Arm Neon Intrinsics Reference(Table of Contents)](https://arm-software.github.io/acle/neon_intrinsics/advsimd.html)
-  * [GitHub Arm C Language Extensions (ACLE)](https://github.com/ARM-software/acle)
   * [Arm Neon Intrinsics Reference for ACLE Q2 2021](https://developer.arm.com/documentation/ihi0073/latest/)
+  * [GitHub Arm C Language Extensions (ACLE)](https://github.com/ARM-software/acle)
+  * [GitHub Release Arm C Language Extensions (ACLE)](https://github.com/ARM-software/acle/releases)
 * gcc
   * [6.62 Built-in Functions Specific to Particular Target Machines](https://gcc.gnu.org/onlinedocs/gcc/Target-Builtins.html)
   * [6.59.7 ARM C Language Extensions (ACLE)](https://gcc.gnu.org/onlinedocs/gcc-8.5.0/gcc/ARM-C-Language-Extensions-_0028ACLE_0029.html)
