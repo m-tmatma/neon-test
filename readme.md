@@ -26,8 +26,14 @@ sudo apt install -y qemu-user
 
 ## build
 
+
 ```
-make
+make neon_test1
+```
+
+
+```
+make neon_test_select
 ```
 
 ## run
@@ -39,5 +45,13 @@ make run_neon_test1
 
 
 ```
-make neon_test_select
+make run_neon_test_select
 ```
+
+
+## build & run
+
+```
+make
+```
+
