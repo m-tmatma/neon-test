@@ -1,0 +1,29 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: install
+      run: sudo apt install -y gcc-12-arm-linux-gnueabi qemu-user
+
+    - name: build neon_test1
+      run: arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99 neon_test1.c -o neon_test1
+
+    - name: build neon_test_select
+      run: arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99 neon_test1.c -o neon_test1
+
+    - name: run neon_test1
+      run: qemu-arm  -L /usr/arm-linux-gnueabi neon_test1
+
+    - name: run neon_test_select
+      run: qemu-arm  -L /usr/arm-linux-gnueabi neon_test_select
