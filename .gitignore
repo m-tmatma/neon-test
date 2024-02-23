@@ -1,4 +1,5 @@
 neon_test1
 neon_test_select
+neon_test_select_normal
 *.s
 
