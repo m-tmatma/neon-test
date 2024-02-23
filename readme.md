@@ -27,17 +27,17 @@ sudo apt install -y qemu-user
 ## build
 
 ```
-arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99 neon_test1.c -o neon_test1
+make
 ```
 
 ## run
 
 
 ```
-qemu-arm  -L /usr/arm-linux-gnueabi neon_test1
+make run_neon_test1
 ```
 
 
 ```
-arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99 neon_test_select.c -o neon_test_select && qemu-arm  -L /usr/arm-linux-gnueabi neon_test_select
+make neon_test_select
 ```
