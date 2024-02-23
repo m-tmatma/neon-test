@@ -17,13 +17,13 @@ jobs:
       run: sudo apt install -y gcc-12-arm-linux-gnueabi qemu-user
 
     - name: build neon_test1
-      run: arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99 neon_test1.c -o neon_test1
+      run: make neon_test1
 
     - name: build neon_test_select
-      run: arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99 neon_test_select.c -o neon_test_select
+      run: make neon_test_select
 
     - name: run neon_test1
-      run: qemu-arm  -L /usr/arm-linux-gnueabi neon_test1
+      run: make run_neon_test1
 
     - name: run neon_test_select
-      run: qemu-arm  -L /usr/arm-linux-gnueabi neon_test_select
+      run: make run_neon_test_select
