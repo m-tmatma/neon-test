@@ -48,8 +48,8 @@ void test_select_int()
 
 void test_select_char()
 {
-    char buf1[] = { 0,1,2,3,4,5,6,7 };
-    char buf2[] = { 8,9,10,11,12,13,14,15 };
+    char buf1[16] = { 0,1,2,3,4,5,6,7 };
+    char buf2[16] = { 8,9,10,11,12,13,14,15 };
     char buf3[16];
     uint8x16_t mask = { 0, 0xff, 0, 0xff, 0, 0xff, 0, 0xff };
 
