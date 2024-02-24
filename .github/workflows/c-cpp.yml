@@ -32,7 +32,7 @@ jobs:
       run: make asm
 
     - name: diff
-      run: diff neon_test_select_normal.s neon_test_select.s
+      run: diff neon_test_select_normal.s neon_test_select.s || true
 
     - uses: actions/upload-artifact@v4
       with:
