@@ -1,6 +1,6 @@
 all: run_neon_test1 run_neon_test_select run_neon_test_select_normal
 clean:
-	rm -f neon_test1 neon_test_select
+	rm -f neon_test1 neon_test_select neon_test_select_normal
 asm: neon_test1.S neon_test_select.S neon_test_select_normal.S
 
 CC=arm-linux-gnueabi-gcc-12 -mfpu=neon -mfloat-abi=softfp -std=c99
