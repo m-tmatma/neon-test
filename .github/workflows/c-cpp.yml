@@ -34,3 +34,7 @@ jobs:
     - name: diff
       run: diff neon_test_select_normal.s neon_test_select.s
 
+    - uses: actions/upload-artifact@v4
+      with:
+        name: asm
+        path: *.s
