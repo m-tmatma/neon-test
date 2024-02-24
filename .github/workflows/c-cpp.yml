@@ -27,3 +27,10 @@ jobs:
 
     - name: run neon_test_select
       run: make run_neon_test_select
+
+    - name: run asm
+      run: make asm
+
+    - name: diff
+      run: diff neon_test_select_normal.s neon_test_select.s
+
